@@ -12,26 +12,25 @@ location: ./server
 Dockerfile: ./server/dev.Dockerfile
 <pre>$ docker build -t ubuntu-vs . -f dev.Dockerfile</pre>
 
-where &lt;user-name&gt; should be replaced to user name, like _develop_ for example
-
 #### Run docker container
 <pre>$ docker run -p 5001:22 -d --name vs-build-env ubuntu-vs /bin/bash</pre>
 It starts image exposes SSH port to host ann will use early created network testnet for communication.
 
 #### Initialization
-On first run of the image it should be added user that will be used by Visual Studio for connection.
+1) On first run of the image it should be added user that will be used by Visual Studio for connection.
 <pre>
 $ docker run -p 5001:22 -it --name vs-build-env ubuntu-vs /bin/bash
 $ useradd -m -d /home/&lt;user-name&gt; -s /bin/bash -G sudo &lt;user-name&gt;
 $ passwd &lt;user-name&gt;
 </pre>
+where &lt;user-name&gt; should be replaced to user name, like _develop_ for example
 
-Should be ran _init.bat_ file that creates symb-link for PROTO folder. PROTO manifest is shared between server and all clients.
+2) Should be ran _init.bat_ file that creates symb-link for PROTO folder. PROTO manifest is shared between server and all clients.
 <pre>
 ./init.bat
 </pre>
 
-Visula studio should have installed C++ Dev Tools for Linux.
+3) Visual Studio should have installed C++ Dev Tools for Linux.
 
 #### Development
 Run Visual Studio, from startup window select "Open local folder".
