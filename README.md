@@ -48,4 +48,4 @@ Dockerfile: ./server/stage.Dockerfile
 <pre>$ docker build -t grpc/server . -f stage.Dockerfile</pre>
 
 #### Run Server
-<pre>$ docker run -p 5050:5050 -it -rm --net testnet --name grpc-server grpc/server</pre>
+<pre>$ docker run -p 5050:5050 -d --net testnet --name grpc-server grpc/server</pre>
