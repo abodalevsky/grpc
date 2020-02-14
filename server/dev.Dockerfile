@@ -11,6 +11,8 @@ RUN mkdir -p /var/run/sshd
  
 RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config && \
    ssh-keygen -A
- 
+
 # expose port 22
 EXPOSE 22
+
+ENTRYPOINT service ssh restart && bash

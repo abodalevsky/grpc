@@ -10,13 +10,13 @@
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
       "inheritEnvironments": [ "linux_x64" ],
-      "remoteMachineName": "1995942800;localhost (username=vs, port=5001, authentication=Password)",
-      "remoteCMakeListsRoot": "$HOME/.vs/${projectDirName}/src",
-      "remoteBuildRoot": "$HOME/.vs/${projectDirName}/out/build/${name}",
-      "remoteInstallRoot": "$HOME/.vs/${projectDirName}/out/install/${name}",
+      "remoteMachineName": "220708255;localhost (username=develop, port=5002, authentication=Password)",
+      "remoteCMakeListsRoot": "$HOME/develop/${projectDirName}/src",
+      "remoteBuildRoot": "$HOME/develop/${projectDirName}/out/build/${name}",
+      "remoteInstallRoot": "$HOME/develop/${projectDirName}/out/install/${name}",
       "remoteCopySources": true,
-      "rsyncCommandArgs": "-t --delete --delete-excluded",
-      "remoteCopyBuildOutput": false,
+      "rsyncCommandArgs": "--copy-links -t --delete --delete-excluded",
+      "remoteCopyBuildOutput": true,
       "remoteCopySourcesMethod": "rsync",
       "addressSanitizerRuntimeFlags": "detect_leaks=0",
       "variables": [
@@ -29,36 +29,6 @@
           "name": "FETCHCONTENT_QUIET",
           "value": "False",
           "type": "BOOL"
-        },
-        {
-          "name": "CMAKE_INSTALL_PREFIX",
-          "value": "/home/vs/.vs/server/out/install/Linux-Debug",
-          "type": "PATH"
-        },
-        {
-          "name": "INSTALL_BIN_DIR",
-          "value": "/home/vs/.vs/server/out/install/Linux-Debug/bin",
-          "type": "PATH"
-        },
-        {
-          "name": "INSTALL_INC_DIR",
-          "value": "/home/vs/.vs/server/out/install/Linux-Debug/include",
-          "type": "PATH"
-        },
-        {
-          "name": "INSTALL_LIB_DIR",
-          "value": "/home/vs/.vs/server/out/install/Linux-Debug/lib",
-          "type": "PATH"
-        },
-        {
-          "name": "INSTALL_MAN_DIR",
-          "value": "/home/vs/.vs/server/out/install/Linux-Debug/share/man",
-          "type": "PATH"
-        },
-        {
-          "name": "INSTALL_PKGCONFIG_DIR",
-          "value": "/home/vs/.vs/server/out/install/Linux-Debug/share/pkgconfig",
-          "type": "PATH"
         }
       ]
     }
