@@ -67,3 +67,12 @@ Sources ./clients/netstandard
 
 ##### Test run
 <pre>docker run -it --rm --net testnet --name grpc-client-netcore grpc/client/netcore:1.21 172.18.0.2:5050</pre>
+
+### NodeJs
+
+#### Prepare image
+<pre>docker build -t grpc/client/nodejs:1.0 -f ./Dockerfile  ../..</pre>
+The context of image is 2 folders up in heirarchy to allow copy <strong>proto</strong> folder.
+
+#### Run client
+<pre>docker run -d --net testnet --name grpc-client-nodejs grpc/client/nodejs:1.0 &lt;ip-server:port&gt;</pre>
