@@ -52,6 +52,8 @@ android/app/libs
 windows/assets
 .vscode/*
 .vs
+bin
+obj
 
 windows/WixInstaller/BlueJeans.NuGetPackager/lib/*
 windows/WixInstaller/SetupAssets

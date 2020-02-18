@@ -1,5 +1,6 @@
 FROM ubuntu:19.10 as runtime
-LABEL description="Run container"
+LABEL maintainer "abodalevsky@hotmail.com"
+LABEL description="Run gRPC CPP server container"
 
 RUN apt-get update
 
